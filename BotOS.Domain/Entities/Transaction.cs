@@ -24,8 +24,5 @@ namespace BotOS.Domain.Entities
         public long? CumulativeGasUsed { get; set; }
         public string? Input { get; set; }
         public string? Confirmations { get; set; }
-        public int CollectionId { get; set; }
-
-        public Collection? Collection { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace BotOS.Domain.Entities
 
     }
 
-    public sealed class Trait 
+    public sealed class Trait
     {
         public string? TraitType { get; set; }
         public string? DisplayType { get; set; }

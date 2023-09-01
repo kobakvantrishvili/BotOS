@@ -7,8 +7,10 @@ namespace BotOS.Domain.Entities
         public int Id { get; set; }
         public string? Slug { get; set; }
         public string? ContractAddress { get; set; }
+        public int BotId { get; set; }
 
         public IEnumerable<Nft>? Nfts { get; set; }
-        public IEnumerable<Transaction>? Transactions { get; set; }
+        public Bot? Bot { get; set; }
+
     }
 }

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BotOS.Persistance\BotOS.Persistance.csproj" />
+    <ProjectReference Include="..\BotOS.Persistance\BotOS.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
