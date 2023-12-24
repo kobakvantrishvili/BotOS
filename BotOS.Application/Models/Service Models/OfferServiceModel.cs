@@ -1,21 +1,20 @@
-﻿using BotOS.Domain.Common;
-using BotOS.Domain.Enums;
+﻿using BotOS.Application.Models.Enums;
 
-namespace BotOS.Domain.Entities
+namespace BotOS.Application.Models.Service_Models
 {
-    public sealed class Offer : IEntityBase
+    public sealed class OfferServiceModel
     {
         public int Id { get; set; }
         public string? OrderHash { get; set; }
         public string? Chain { get; set; }
-        public OfferType Type { get; set; }
-        public Criteria? Criteria { get; set; }
+        public OfferTypeServiceModel Type { get; set; }
+        public CriteriaServiceModel? Criteria { get; set; }
         public DateTime? StartTime { get; set; }
         public DateTime? EndTime { get; set; }
         public bool? IsFulfilled { get; set; }
     }
 
-    public sealed class Criteria
+    public sealed class CriteriaServiceModel
     {
         public string? CollectionSlug { get; set; }
         public string? CollectionAddress { get; set; }

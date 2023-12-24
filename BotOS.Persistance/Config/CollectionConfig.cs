@@ -8,9 +8,13 @@ namespace BotOS.Persistence.Config
     {
         public void Configure(EntityTypeBuilder<Collection> builder)
         {
-           builder.HasKey(x => x.Id);
-
+            builder.HasKey(x => x.Id);
+            
             builder.Property(x => x.Slug).IsRequired();
+            builder.Property(x => x.ContractAddress).IsRequired();
+            
+            builder.HasOne(x => x.Bot).WithMany(x => x.Collections).HasForeignKey(x => x.BotId);
+            builder.HasMany(x => x.Nfts).WithOne(x => x.Collection).HasForeignKey(x => x.CollectionId);
         }
     }
 }

@@ -1,18 +1,21 @@
+using BotOS.Persistence;
+
 var builder = WebApplication.CreateBuilder(args);
-AddServices(builder.Services);
+AddServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 Configure(app, app.Environment, app.Lifetime);
 
 app.Run();
 
-
 // Add services to the container.
-void AddServices(IServiceCollection services)
+void AddServices(IServiceCollection services, IConfiguration configuration)
 {
     services.AddControllers();
     services.AddEndpointsApiExplorer();
     services.AddSwaggerGen();
+
+    services.AddPersistenceLayer(configuration);
 }
 
 // Configure request pipeline
